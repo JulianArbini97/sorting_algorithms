@@ -30,5 +30,12 @@ void shell_sort(int *array, size_t size);
 listint_t *create_listint(const int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
+void TopDownSplitMerge(int B[], int left, int right, int A[]);
+void CopyArray(int A[], int left, int right, int B[]);
+void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void heapify(int *array, size_t count);
+void SiftDown(int *array, int start, int end, int count);
+
 
 #endif
