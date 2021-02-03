@@ -19,8 +19,8 @@ temp = array[end];
 array[end] = array[0];
 array[0] = temp;
 end = end - 1;
-SiftDown(array, 0, end, count);
 print_array(array, count);
+SiftDown(array, 0, end, count);
 }
 }
 
