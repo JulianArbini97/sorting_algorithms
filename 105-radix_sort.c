@@ -11,6 +11,10 @@ void radix_sort(int *array, size_t size)
     int c = 0, j, y = 0, i = 0, l = 0;
     int *sort, *dec;
 
+    if (size < 2)
+    {
+        return;
+    }
     while (i < (int)size)
     {
         if (array[i] > max_num)
@@ -38,7 +42,6 @@ void radix_sort(int *array, size_t size)
     while (itera > 0)
     {
         x = 0;
-        printf("vuelta");
         for (base = 0; base < 10; base++)
         {
             for (j = 0; j < (int)size; j++)
@@ -50,6 +53,7 @@ void radix_sort(int *array, size_t size)
                 }
             }
         }
+        print_array(sort, size);
         while (y < (int)size)
         {
             dec[y] = sort[y] / 10;
@@ -60,7 +64,7 @@ void radix_sort(int *array, size_t size)
     }
   for (l = 0; l < (int)size; l++)
     {
-        printf("%d, ", sort[l]);
         array[l] = sort[l];
     }
+    free(sort);
 }

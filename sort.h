@@ -36,6 +36,6 @@ void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void heapify(int *array, size_t count);
 void SiftDown(int *array, int start, int end, int count);
-
+void radix_sort(int *array, size_t size);
 
 #endif
